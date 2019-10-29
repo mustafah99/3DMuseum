@@ -1,0 +1,98 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    height: 400px;
+    width: 500px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    bottom: 100%;
+    top: 50%;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 70px;
+    text-shadow: 0 0 3vw rgb(255, 255, 255);
+}
+
+body {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url('http://tiny.cc/6jqw8y');
+    background-position: center;
+    width: 100%;
+    margin: 0;
+    background-size: cover;
+    -webkit-animation: slide 40s linear infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 800px;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+#card {
+    width: 480px;
+    height: 480px;
+
+    background-image: url('http://tiny.cc/6jqw8y');
+    background-position: center;
+    background-size: cover;
+    
+    box-shadow: 0 19px 38px rgba(red, green, blue, alpha),
+                0 19px 38px rgba(red, green, blue, alpha);
+
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.550, .055, .675, .19);
+}
+
+.js-show {
+    width: 480px;
+    height: 480px;
+
+    background-image: url('https://osnatfineart.com/paintings/images/5185-modern-abstract-painting.jpg');
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 19px 38px rgba(red, green, blue, alpha),
+    rgba(red, green, blue, alpha);
+
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.550, .055, .675, .19);
+
+    display: none;
+}
+
+h1 {
+    animation: neon 5s ease infinite;
+    -moz-animation: neon 5s ease infinite;
+    -webkit-animation: neon 5s ease infinite;
+}
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw rgb(34, 79, 202), 0 0 3vw rgb(34, 79, 202), 0 0 10 vw rgb(34, 79, 202), 0 0 10vw rgb(34, 79, 202), 0 0 .4vw #2c87ff, .5vw .5vw .1vw #1f0342;
+        color: white;  
+    }               
+    50% {
+        text-shadow: 0 0 .5vw rgb(34, 79, 202), 0 0 1.5vw rgb(34, 79, 202), 0 0 5vw rgb(34, 79, 202), 0 0 5vw rgb(34, 79, 202), 0 0 .2vw rgb(34, 79, 202), .5vw .5vw .1vw rgb(82, 0, 235);
+        color: #161480;
+    }
+}
